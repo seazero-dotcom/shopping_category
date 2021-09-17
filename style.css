@@ -1,0 +1,118 @@
+:root {
+  /* Color */
+  --dark-background-color: #3f454e;
+  --white-color: #ffffff;
+  --blue-color: #3e89c4;
+  --yellow-color: #febe29;
+  --pink-color: #fd7f83;
+
+  /* Size */
+  --padiing: 12px;
+  --clothes-size: 45px;
+  --btn-height: 50px;
+  --btn-width: 60px;
+
+  /* Font size */
+  --font-large: 15px;
+  --font-medium: 13px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--dark-background-color);
+}
+
+body {
+  font-family: Fira Sans;
+}
+
+li {
+  list-style: none;
+}
+
+button,
+button:focus {
+  border: none; /* 벽돌같은 버튼 모양 없애줌 */
+  cursor: pointer;
+  outline: none;
+  font-family: Fira Sans;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padiing);
+}
+
+header .logo img {
+  width: 130px;
+  display: block;
+  margin: 0 auto 20px auto; /* 아 대박 이미지 가운데 정렬 됐다 */
+}
+
+header .menu {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: 0 auto; /* div가운데 정렬함ㅋ */
+}
+
+header .menu img {
+  width: var(--clothes-size);
+}
+
+header .menu button {
+  padding: 10px;
+  width: auto;
+  font-size: var(--font-large);
+  border-radius: 7%;
+}
+
+header .menu img:hover,
+header .menu button:hover {
+  transform: scale(1.1);
+}
+
+header .menu .blueBtn button {
+  background-color: var(--blue-color);
+}
+
+header .menu .yellowBtn button {
+  background-color: var(--yellow-color);
+}
+
+header .menu .pinkBtn button {
+  background-color: var(--pink-color);
+}
+
+.viewlist {
+  width: 60%;
+  margin: 40px auto 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.viewlist .item {
+  background-color: var(--white-color);
+  border-radius: 3%;
+  padding: var(--padiing);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.viewlist .item img {
+  width: var(--clothes-size);
+  height: var(--clothes-size);
+  background-color: var(--white-color);
+}
+
+.viewList .item span {
+  /*.info 글자 배경색 흰색으로 바꾸는거 부터 하기*/
+  background-color: var(--white-color);
+}
+
+@media screen and (min-width: 768px) {
+}
