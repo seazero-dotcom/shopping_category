@@ -95,11 +95,16 @@ header .menu .pinkBtn button {
   flex-direction: column;
   justify-content: space-around;
 }
+
+.viewlist .itemRoll {
+  overflow-y: scroll;
+}
+
 .viewlist .item {
+  display: flex;
   background-color: var(--white-color);
   border-radius: 3%;
   padding: var(--padiing);
-  text-align: center;
   margin-bottom: 10px;
 }
 
@@ -109,9 +114,10 @@ header .menu .pinkBtn button {
   background-color: var(--white-color);
 }
 
-.viewList .item span {
-  /*.info 글자 배경색 흰색으로 바꾸는거 부터 하기*/
+span {
   background-color: var(--white-color);
+  margin-left: calc(var(--padiing) * 2);
+  margin-top: var(--padiing);
 }
 
 @media screen and (min-width: 768px) {

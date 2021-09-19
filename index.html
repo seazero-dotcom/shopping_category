@@ -18,57 +18,40 @@
             <img src="image/logo.png" alt="">
         </div>
         <div class="menu">
-                    <img src="image/blue_t.png" alt="">
-                    <img src="image/blue_p.png" alt="">
-                    <img src="image/blue_s.png" alt="">
+                    <img 
+                        src="image/blue_t.png" 
+                        alt="tshirt"
+                        class="imgBtn"
+                        data-key="type"
+                        data-value="tshirt"
+                        />
+                    <img 
+                        src="image/blue_p.png" 
+                        alt="pants"
+                        class="imgBtn"
+                        data-key="type"
+                        data-value="pants"
+                    />
+                    <img 
+                        src="image/blue_s.png" 
+                        alt="skirt"
+                        class="imgBtn"
+                        data-key="type"
+                        data-value="skirt"
+                    />
                     <li class="blueBtn">
-                        <button>Blue</button>
+                        <button class="btn colorBtn blue" data-key="color" data-value="blue">Blue</button>
                     </li>
                     <li class="yellowBtn">
-                        <button>Yellow</button>
+                        <button class="btn colorBtn yellow" data-key="color" data-value="yellow">Yellow</button>
                     </li>
                     <li class="pinkBtn">
-                        <button>Pink</button>
+                        <button class="btn colorBtn pink" data-key="color" data-value="pink">Pink</button>
                     </li>
         </div>
     </header>
 
     <!-- View Part -->
-    <section class="viewlist">
-        
-            <div class="item">
-                <img class="img" src="image/pink_t.png" alt="">
-                <span class="info">female, large size</span>
-            </div>
-            <div class="item">
-                <img class="img" src="image/blue_p.png" alt="">
-                <span class="info">man, small size</span>
-            </div>
-            <div class="item">
-                <img class="img" src="image/yellow_p.png" alt="">
-                <span class="info" >man, large size</span>
-            </div>
-            <div class="item">
-                <img class="img" src="image/yellow_s.png" alt="">
-                <span class="info">man, large size</span>
-            </div>
-            <div class="item">
-                <img class="img" src="image/blue_s.png" alt="">
-                <span class="info">female, small size</span>
-            </div>
-            <div class="item">
-                <img class="img" src="image/blue_t.png" alt="">
-                <span class="info">male, large size</span>
-            </div>
-            <div class="item">
-                <img class="img" src="image/pink_p.png" alt="">
-                <span class="info">man, small size</span>
-            </div>
-            <div class="item">
-                <img class="img" src="image/pink_s.png" alt="">
-                <span class="info">female, large size</span>
-            </div>
-        
-    </section>
+    <ul class="items"></ul>
 </body>
 </html>
