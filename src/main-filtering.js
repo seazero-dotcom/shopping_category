@@ -31,11 +31,13 @@ function onButtonClick(event, items) {
   if (key == null || value == null) {
     return;
   }
-  updateItems(items, key, value);
+  updateItems(items, key, value); //버튼이 클릭이되면 해당하는 key와 value를 updateItems함수를 이용해서
 }
 
 // Make the items matching {key: value} invisible.
 function updateItems(items, key, value) {
+  //html요소가 들어있는 items배열을 빙글빙글 돌면서 해당하는 요소들만 클래스를 이용해서 보여주고/보여지지 않고 이런식으로 한다.
+  // 버튼이 클릭될 때마다 전체적인 리스트가 다시 업데이트 되어져야하는 불필요한 과정을 생략할 수 있다.
   items.forEach((item) => {
     if (item.dataset[key] === value) {
       item.classList.remove("invisible");

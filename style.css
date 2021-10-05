@@ -20,11 +20,11 @@
 
 body {
   font-family: Fira Sans;
-  height: 100vh;
+  height: 100vh; /*body의 height을 view port 화면의 100%를 사용하기 위해 */
   background-color: var(--dark-background-color);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /*수평을 중간으로 맞춤*/
   align-items: center;
 }
 
@@ -34,7 +34,7 @@ body {
 }
 
 .menu {
-  background-color: transparent;
+  background-color: transparent; /* button의 배경색 투명으로 만들어준다. */
   border: none;
   outline: none;
   cursor: pointer;
@@ -49,7 +49,7 @@ body {
 
 .buttons {
   display: flex;
-  align-items: center;
+  align-items: center; /*가로에서 중앙정렬*/
 }
 
 .imgBtn {
@@ -79,16 +79,16 @@ body {
   width: 60%;
   height: 60%;
   list-style: none;
-  padding-left: 0;
+  padding-left: 0; /*li태그는 양 옆에 패딩이 들어있기 때문에 없애준다 */
   overflow-y: scroll;
 }
 
 .item {
   background-color: var(--white-color);
   display: flex;
-  align-items: center;
+  align-items: center; /*이미지와 텍스트 수직으로 가운데 정렬*/
   padding: var(--base-space);
-  margin-bottom: var(--base-space);
+  margin-bottom: var(--base-space); /*아이템들간의 간격*/
 }
 
 .item.invisible {
