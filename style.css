@@ -5,120 +5,103 @@
   --blue-color: #3e89c4;
   --yellow-color: #febe29;
   --pink-color: #fd7f83;
+  --light-grey-color: #dfdfdf;
 
-  /* Size */
-  --padiing: 12px;
-  --clothes-size: 45px;
-  --btn-height: 50px;
-  --btn-width: 60px;
+  /* size */
+  --base-space: 8px;
+  --size-button: 60px;
+  --size-border: 4px;
+  --size-thumbnail: 50px;
+  --font-size: 18px;
 
-  /* Font size */
-  --font-large: 15px;
-  --font-medium: 13px;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  background-color: var(--dark-background-color);
+  /* annimation */
+  --animation-duration: 300ms;
 }
 
 body {
   font-family: Fira Sans;
-}
-
-li {
-  list-style: none;
-}
-
-button,
-button:focus {
-  border: none; /* 벽돌같은 버튼 모양 없애줌 */
-  cursor: pointer;
-  outline: none;
-  font-family: Fira Sans;
-}
-
-/* Header */
-header {
+  height: 100vh;
+  background-color: var(--dark-background-color);
   display: flex;
   flex-direction: column;
-  padding: var(--padiing);
+  justify-content: center;
+  align-items: center;
 }
 
-header .logo img {
-  width: 130px;
-  display: block;
-  margin: 0 auto 20px auto; /* 아 대박 이미지 가운데 정렬 됐다 */
+.logo {
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
 }
 
-header .menu {
-  display: flex;
-  justify-content: space-around;
-  width: 60%;
-  margin: 0 auto; /* div가운데 정렬함ㅋ */
+.menu {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+  margin-right: var(--base-space);
 }
 
-header .menu img {
-  width: var(--clothes-size);
-}
-
-header .menu button {
-  padding: 10px;
-  width: auto;
-  font-size: var(--font-large);
-  border-radius: 7%;
-}
-
-header .menu img:hover,
-header .menu button:hover {
+.menu:hover,
+.logo:hover {
   transform: scale(1.1);
 }
 
-header .menu .blueBtn button {
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.imgBtn {
+  width: var(--size-button);
+  height: var(--size-button);
+}
+
+.colorBtn {
+  font-size: var(--font-size);
+  padding: calc(var(--base-space) * 2);
+  border-radius: var(--size-border);
+}
+
+.blue {
   background-color: var(--blue-color);
 }
 
-header .menu .yellowBtn button {
+.yellow {
   background-color: var(--yellow-color);
 }
 
-header .menu .pinkBtn button {
+.pink {
   background-color: var(--pink-color);
 }
 
-.viewlist {
+.items {
   width: 60%;
-  margin: 40px auto 20px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.viewlist .itemRoll {
+  height: 60%;
+  list-style: none;
+  padding-left: 0;
   overflow-y: scroll;
 }
 
-.viewlist .item {
+.item {
+  background-color: var(--white-color);
   display: flex;
-  background-color: var(--white-color);
-  border-radius: 3%;
-  padding: var(--padiing);
-  margin-bottom: 10px;
+  align-items: center;
+  padding: var(--base-space);
+  margin-bottom: var(--base-space);
 }
 
-.viewlist .item img {
-  width: var(--clothes-size);
-  height: var(--clothes-size);
+.item.invisible {
   background-color: var(--white-color);
+  display: none;
 }
 
-span {
-  background-color: var(--white-color);
-  margin-left: calc(var(--padiing) * 2);
-  margin-top: var(--padiing);
+.item__thumbnail {
+  width: var(--size-thumbnail);
+  height: var(--size-thumbnail);
 }
 
-@media screen and (min-width: 768px) {
+.item__description {
+  margin-left: var(--base-space);
+  font-size: var(--font-size);
 }
